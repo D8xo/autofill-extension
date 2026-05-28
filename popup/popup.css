@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+  width: 300px;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Fill button */
+.btn {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  transition: background 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.btn:disabled {
+  background: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Results panel */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.results.hidden {
+  display: none;
+}
+
+.results-summary {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+.results-summary.ok    { background: #f0fdf4; color: #16a34a; }
+.results-summary.warn  { background: #fefce8; color: #ca8a04; }
+.results-summary.error { background: #fef2f2; color: #dc2626; }
+
+.all-good {
+  font-size: 12px;
+  color: #16a34a;
+}
+
+/* Unfilled required fields list */
+.needs-heading {
+  font-size: 12px;
+  font-weight: 700;
+  color: #dc2626;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.needs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.needs-list li {
+  font-size: 13px;
+  padding: 5px 8px;
+  background: #fef2f2;
+  border-left: 3px solid #dc2626;
+  border-radius: 3px;
+  color: #1a1a1a;
+  text-transform: capitalize;
+}
+
+/* Edit profile link */
+.settings-link {
+  font-size: 12px;
+  color: #2563eb;
+  text-align: center;
+  text-decoration: none;
+}
+
+.settings-link:hover {
+  text-decoration: underline;
+}
